@@ -2,15 +2,26 @@
 <head>
 <meta name="viewport" content="width=device-width" />
 <title>LED Control</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
          <body>
-         Motor Control:
+			
+			 //Insert Live Stream video hear 
+			 
+			 <h1 style="text-align: center">Motor Control:</h1>
          <form method="get" action="index.php">
+			 <table>
                  <input type="submit" value="front" name="direction">
-                 <input type="submit" value="back" name="direction">
                  <input type="submit" value="left" name="direction">
                  <input type="submit" value="right" name="direction">
-				
+				 <input type="submit" value="back" name="direction">
+
+			 </table>	
          </form>
          <?php
          $setmode17 = shell_exec("/usr/local/bin/gpio -g mode 17 out");
