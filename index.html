@@ -12,23 +12,39 @@
          <body>
 			
 			<!-- Insert Live Stream video here -->
+             <img src="https://cdn.pixabay.com/photo/2015/09/15/17/18/vector-video-player-941434_960_720.png" style="height: 400px; width: auto; display:block; margin-left:auto;  margin-right:auto;">
 			 
-			 <h1 style="text-align: center">Motor Control:</h1>
-         <form method="post" action="index.php" style="padding: 1em;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%) ">
-             <div style="align: center">
-                 <input type="submit" value="front" name="direction" style="text align: center"> 
-             </div> 
-            <br>&nbsp;
-                 <input type="submit" value="left" name="direction">
-                 <input type="submit" value="right" name="direction"> 
-                         <br>&nbsp;<br>
-          
-                <input type="submit" value="back" name="direction">
+			 <h3 style="text-align: center">Motor Control:</h3>
+               <form method="post" action="index.php" style="width: 20%; margin: 0 auto;">
+                <table> 
+                    <tr>
+                            <td style="width: 33.3%">&nbsp;</td>   
+                            <td style="width: 33.3%;">
+                                <input type="submit" value="front" name="direction" style="width: 100%">
+
+                            </td>
+                        <td style="width: 33.3%">&nbsp;</td>        
+                            
+                    </tr>
+                    <tr>
+                            <td style="width: 33.3%">
+                                <input type="submit" value="left"  name="direction" style="width: 100%">
+                            </td>
+                             <td style="width: 33.3%">
+                            </td>
+                            <td style="width: 33.3%">
+                                <input type="submit" value="right" name="direction" style="width: 100%"> 
+                            </td>
+                    </tr>                    
+                    <tr>
+                            <td style="width: 33.3%">&nbsp;</td>
+                            <td style="width: 33.3%">
+                                <input type="submit" value="back"  name="direction" style="width: 100%">                        
+                            </td>
+                            <td style="width: 33.3%">&nbsp;</td>
+
+                    </tr>                    
+                </table>
          </form>
          <?php
              
