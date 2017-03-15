@@ -20,18 +20,18 @@
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%) ">
-             <div style="text align: center">
-                 <input type="submit" value="front" name="direction" style="text align: center"> <br>
+             <div style="align: center">
+                 <input type="submit" value="front" name="direction" style="text align: center"> 
              </div> 
-            <div style="text align: center"> 
+            <br>&nbsp;
                  <input type="submit" value="left" name="direction">
-                 <input type="submit" value="right" name="direction"> <br>
-             </div>
-             <div style="text align: center">
+                 <input type="submit" value="right" name="direction"> 
+                         <br>&nbsp;<br>
+          
                 <input type="submit" value="back" name="direction">
-             </div>
          </form>
          <?php
+             
          $setmode17 = shell_exec("/usr/local/bin/gpio -g mode 17 out");
          if($_POST['direction']== “left”){
 			//code to turn left
