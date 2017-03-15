@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width" />
+<title>LED Control</title>
+</head>
+         <body>
+         Motor Control:
+         <form method="get" action="index.php">
+                 <input type="submit" value="front" name="direction">
+                 <input type="submit" value="back" name="direction">
+                 <input type="submit" value="left" name="direction">
+                 <input type="submit" value="right" name="direction">
+				
+         </form>
+         <?php
+         $setmode17 = shell_exec("/usr/local/bin/gpio -g mode 17 out");
+         if($_GET['direction']== “left”){
+			//code to turn left
+                 $gpio_on = shell_exec("/usr/local/bin/gpio -g write 17 1");
+                 echo "Left is on";
+            sleep(3);
+            $gpio_off = shell_exec("/usr/local/bin/gpio -g write 17 0");
+         }
+         else if($_GET['direction'] == “right”){
+				//code to turn right
+                 $gpio_on = shell_exec("/usr/local/bin/gpio -g write 17 1");
+                 echo "Rght is on";
+            $gpio_off = shell_exec("/usr/local/bin/gpio -g write 17 0");
+         }
+        else if($_GET['direction'] == “front”){
+				//code to turn right
+                 $gpio_on = shell_exec("/usr/local/bin/gpio -g write 17 1");
+                 echo "Front is off";
+            $gpio_off = shell_exec("/usr/local/bin/gpio -g write 17 0");
+         }
+        else if($_GET['direction'] == “back”){
+				//code to turn right
+                 $gpio_on = shell_exec("/usr/local/bin/gpio -g write 17 1");
+                 echo "Back is off";
+            $gpio_off = shell_exec("/usr/local/bin/gpio -g write 17 0");
+         }
+         ?>
+         </body>
+</html>
