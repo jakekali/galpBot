@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width" />
-<title>LED Control</title>
+<title>The Holy GalpBot</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- Optional theme -->
@@ -12,6 +12,7 @@
          <body>
 			
 			<!-- Insert Live Stream video here -->
+             <h1 style="text-align: center">GalpBot</h1>
              <img src="https://cdn.pixabay.com/photo/2015/09/15/17/18/vector-video-player-941434_960_720.png" style="height: 400px; width: auto; display:block; margin-left:auto;  margin-right:auto;">
 			 
 			 <h3 style="text-align: center">Motor Control:</h3>
@@ -20,7 +21,7 @@
                     <tr>
                             <td style="width: 33.3%">&nbsp;</td>   
                             <td style="width: 33.3%;">
-                                <input type="submit" value="front" name="direction" style="width: 100%">
+                                <input type="submit" value="Front" name="direction" style="width: 100%" class="btn btn-default">
 
                             </td>
                         <td style="width: 33.3%">&nbsp;</td>        
@@ -28,18 +29,18 @@
                     </tr>
                     <tr>
                             <td style="width: 33.3%">
-                                <input type="submit" value="left"  name="direction" style="width: 100%">
+                                <input type="submit" value="Left"  name="direction" style="width: 100%" class="btn btn-default">
                             </td>
                              <td style="width: 33.3%">
                             </td>
                             <td style="width: 33.3%">
-                                <input type="submit" value="right" name="direction" style="width: 100%"> 
+                                <input type="submit" value="Right" name="direction" style="width: 100%" class="btn btn-default"> 
                             </td>
                     </tr>                    
                     <tr>
                             <td style="width: 33.3%">&nbsp;</td>
                             <td style="width: 33.3%">
-                                <input type="submit" value="back"  name="direction" style="width: 100%">                        
+                                <input type="submit" value="Back"  name="direction" style="width: 100%" class="btn btn-default">                        
                             </td>
                             <td style="width: 33.3%">&nbsp;</td>
 
@@ -49,27 +50,27 @@
          <?php
              
          $setmode17 = shell_exec("/usr/local/bin/gpio -g mode 17 out");
-         if($_POST['direction']== “left”){
-			//code to turn left
+         if($_POST['direction']== “Left”){
+			//code to turn Left
                  $gpio_on = shell_exec("/usr/local/bin/gpio -g write 17 1");
                  echo "Left is on";
             sleep(3);
             $gpio_off = shell_exec("/usr/local/bin/gpio -g write 17 0");
          }
-         else if($_POST['direction'] == “right”){
-				//code to turn right
+         else if($_POST['direction'] == “Right”){
+				//code to turn Right
                  $gpio_on = shell_exec("/usr/local/bin/gpio -g write 17 1");
                  echo "Rght is on";
             $gpio_off = shell_exec("/usr/local/bin/gpio -g write 17 0");
          }
-        else if($_POST['direction'] == “front”){
-				//code to turn right
+        else if($_POST['direction'] == “Front”){
+				//code to turn Right
                  $gpio_on = shell_exec("/usr/local/bin/gpio -g write 17 1");
                  echo "Front is off";
             $gpio_off = shell_exec("/usr/local/bin/gpio -g write 17 0");
          }
-        else if($_POST['direction'] == “back”){
-				//code to turn right
+        else if($_POST['direction'] == “Back”){
+				//code to turn Right
                  $gpio_on = shell_exec("/usr/local/bin/gpio -g write 17 1");
                  echo "Back is off";
             $gpio_off = shell_exec("/usr/local/bin/gpio -g write 17 0");
