@@ -14,14 +14,22 @@
 			<!-- Insert Live Stream video here -->
 			 
 			 <h1 style="text-align: center">Motor Control:</h1>
-         <form method="get" action="index.php">
-			 <table>
-                 <input type="submit" value="front" name="direction">
+         <form method="get" action="index.php" style="      padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) ">
+             <div style="text align: center">
+                 <input type="submit" value="front" name="direction" style="text align: center"> <br>
+             </div> 
+            <div style="text align: center"> 
                  <input type="submit" value="left" name="direction">
-                 <input type="submit" value="right" name="direction">
-				 <input type="submit" value="back" name="direction">
-
-			 </table>	
+                 <input type="submit" value="right" name="direction"> <br>
+             </div>
+             <div style="text align: center">
+                <input type="submit" value="back" name="direction">
+             </div>
          </form>
          <?php
          $setmode17 = shell_exec("/usr/local/bin/gpio -g mode 17 out");
