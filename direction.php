@@ -1,5 +1,5 @@
 <?php
-$return = "error completlying command";
+$return = "error completing command";
 $setmode17 = shell_exec("/usr/local/bin/gpio -g mode 17 out");
 $direction = $_POST['direction']; 
 switch($direction){
