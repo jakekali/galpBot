@@ -1,36 +1,31 @@
 <?php
+include_once "functions.php";
+
 $return = "error completing command";
-$setmode17 = shell_exec("/usr/local/bin/gpio -g mode 17 out");
-$direction = $_POST['direction']; 
+$direction = $_POST['direction'];
 switch($direction){
     case "Left":
-        //Turn Left
-        $gpio_on = shell_exec("/usr/local/bin/gpio -g write 17 1");
+        $params = array('direction' => 'left');
+        curl_request_async($params);
         $return = "Left is on";
-        sleep(3);
-        $gpio_off = shell_exec("/usr/local/bin/gpio -g write 17 0");
     break;
     case "Right":
-        //Turn Right
-        $gpio_on = shell_exec("/usr/local/bin/gpio -g write 17 1");
-        $return = "Right is on";
-        sleep(3);
-        $gpio_off = shell_exec("/usr/local/bin/gpio -g write 17 0");
+        $params = array('direction' => 'right');
+        curl_request_async($params);
+        $return = "Left is on";
     break;
     case "Front";
-        //code to move foward
-         $gpio_on = shell_exec("/usr/local/bin/gpio -g write 17 1");
-        $return = "Front is on";
-        sleep(3);
-        $gpio_off = shell_exec("/usr/local/bin/gpio -g write 17 0");
+        $params = array('direction' => 'front');
+        curl_request_async($params);
+        $return = "Left is on";
     break;
     case "Back":
-        //code to reverse
-        $gpio_on = shell_exec("/usr/local/bin/gpio -g write 17 1");
-        $return = "Moving reverse";
-        sleep(3);
-        $gpio_off = shell_exec("/usr/local/bin/gpio -g write 17 0");
+        $params = array('direction' => 'back');
+        curl_request_async($params);
+        $return = "Left is on";
     break;
 }
-    echo $return;
+    header("Location: http://galpbot.bneishaareshalom.com/");
+
+
 ?>
