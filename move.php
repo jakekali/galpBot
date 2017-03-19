@@ -1,6 +1,6 @@
 <?php
 $some = ignore_user_abort(1);
-include "functions.php";
+include_once "functions.php";
 $return = "error completing command";
 $setmode17 = shell_exec("/usr/local/bin/gpio -g mode 17 out");
 $direction = $_POST['direction'];
