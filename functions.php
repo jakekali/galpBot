@@ -3,7 +3,7 @@
 function curl_request_async($params)
 {
     $type='POST';
-    $url="move.php";
+    $url="http://localhost:6060/move.php";
     foreach ($params as $key => &$val) {
         if (is_array($val)) $val = implode(',', $val);
         $post_params[] = $key.'='.urlencode($val);
