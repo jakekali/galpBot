@@ -3,7 +3,7 @@
 function curl_request_async($params)
 {
     $type='POST';
-    $url="http://localhost/move.php";
+    $url="move.php";
     foreach ($params as $key => &$val) {
         if (is_array($val)) $val = implode(',', $val);
         $post_params[] = $key.'='.urlencode($val);
@@ -29,4 +29,10 @@ function curl_request_async($params)
 
     fwrite($fp, $out);
     fclose($fp);
+}
+
+function mailDebugger ($message){
+    $handle = fopen('C:\Users\Joey\Desktop\somefile.txt', 'a');
+    fwrite($handle, $message);
+    fclose($handle);
 }

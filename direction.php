@@ -25,7 +25,9 @@ switch($direction){
         $return = "Left is on";
     break;
 }
-    header("Location: http://galpbot.bneishaareshalom.com/");
+//mailDebugger("Before: ".$direction);
+
+    header("Location: /");
 
 
 ?>
