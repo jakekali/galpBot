@@ -1,0 +1,7 @@
+Joe Braha <joseph_braha119@flatbush.org>
+Jacob Khalili <jacob_khalili119@flatbush.org>
+Sonny Setton <sonny_setton119@flatbush.org>
+
+GalpBot
+
+The GalpBot is a device rethinking camera technology. We have a camera mounted on a motorized car controlled by a Raspberry Pi. The camera is controlled via a web-based interface across the network. The highly responsive controls of the web client produce optimal video/ Expansive battery life allows for uninterrupted use. Two microprocessors are used to control the bot’s footage stream. The web interface is designed to be as intuitive and familiar as possible.
