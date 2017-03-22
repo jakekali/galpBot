@@ -2,7 +2,7 @@
     require 'vendor/autoload.php';
     $some = ignore_user_abort(1);
     include_once "functions.php";
-    $apiData = $HTTP_RAW_POST_DATA;
+    $apiData =json_decode(file_get_contents('php://input'), true);
 
     $apiDataArray = json_decode($apiData);
     $intentName = $apiData['metadata']['intentName'];
