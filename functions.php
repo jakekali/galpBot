@@ -1,5 +1,9 @@
 <?php
-
+require 'vendor/autoload.php';
+function textToSpeech($text){
+    
+    return $SpeechMP3;
+}
 function curl_request_async($params)
 {
     $type='POST';
@@ -11,7 +15,6 @@ function curl_request_async($params)
     $post_string = implode('&', $post_params);
 
     $parts=parse_url($url);
-
     $fp = fsockopen($parts['host'],
         isset($parts['port'])?$parts['port']:80,
         $errno, $errstr, 30);
@@ -33,6 +36,6 @@ function curl_request_async($params)
 
 function mailDebugger ($message){
     $handle = fopen('C:\Users\Joey\Desktop\somefile.txt', 'a');
-    fwrite($handle, $message);
+    fwrite($handle, $message."\r\n");
     fclose($handle);
 }
